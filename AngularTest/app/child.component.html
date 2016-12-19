@@ -1,0 +1,6 @@
+﻿<div style="border: 1px solid">
+    <ng-content select="header"></ng-content>
+    <p>Text got from parent:{{text}}</p>
+    <button (click)="increment()">Increment</button>
+    <ng-content select="footer"></ng-content>
+</div>

@@ -1,0 +1,21 @@
+﻿<h2>My favorite skill is: {{myskills}}</h2>
+<p>Skill:</p>
+<ul>
+    <li *ngFor="let skl of skills">
+        {{ skl }}
+    </li>
+</ul>
+<p>{{greeting}}</p>
+<child-component #bob text="My text" [(count)]="number1"></child-component>
+<child-component [text]="greeting" [count]="number2" (countChange)="number2=$event"></child-component>
+<child-component [text]="greeting" [count]="number3" (countChange)="countOnChange($event)">
+    <header>Header</header>
+    <footer>Footer</footer>
+</child-component>
+<p>Count:</p>
+<ul>
+    <li>{{number1}}</li>
+    <li>{{number2}}</li>
+    <li>{{number3}}</li>
+    <li>{{bob}}</li>
+</ul>

@@ -9,23 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var child_component_1 = require('./child.component');
-var greeter_service_1 = require('./greeter.service');
-var AppModule = (function () {
-    function AppModule() {
+var Greeter = (function () {
+    function Greeter() {
+        this.message = 'Registering Providers while Bootstrapping an Angular 2 application!';
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent, child_component_1.ChildComponent],
-            bootstrap: [app_component_1.AppComponent],
-            providers: [greeter_service_1.Greeter]
-        }), 
+    Greeter = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], Greeter);
+    return Greeter;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.Greeter = Greeter;
+//# sourceMappingURL=greeter.service.js.map
