@@ -9,15 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var Greeter = (function () {
-    function Greeter() {
-        this.message = 'Registering Providers while Bootstrapping an Angular 2 application!';
+var UserInfoComponent = (function () {
+    function UserInfoComponent() {
+        this.userName = "User name";
+        this.headerText = this.userName;
+        this.headerText = "\u041F\u0440\u0438\u0432\u0456\u0442\u0443\u043B\u044C\u043A\u0438 " + this.userName;
     }
-    Greeter = __decorate([
-        core_1.Injectable(), 
+    UserInfoComponent = __decorate([
+        core_1.Component({
+            selector: 'user-info',
+            //moduleId: module.id,
+            templateUrl: 'app/user.info.component.html'
+        }), 
         __metadata('design:paramtypes', [])
-    ], Greeter);
-    return Greeter;
+    ], UserInfoComponent);
+    return UserInfoComponent;
 }());
-exports.Greeter = Greeter;
-//# sourceMappingURL=greeter.service.js.map
+exports.UserInfoComponent = UserInfoComponent;
+//# sourceMappingURL=user.info.component.js.map

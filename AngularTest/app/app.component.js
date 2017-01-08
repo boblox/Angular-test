@@ -12,7 +12,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require('@angular/core');
-var greeter_service_1 = require('./greeter.service');
+var greeter_service_1 = require('./service/greeter.service');
 var implementor1 = {
     a: 20,
     b: 30,
@@ -138,7 +138,7 @@ var AppComponent = (function () {
             //moduleId: module.id,
             templateUrl: 'app/app.component.html'
         }), 
-        __metadata('design:paramtypes', [greeter_service_1.Greeter])
+        __metadata('design:paramtypes', [greeter_service_1.GreeterService])
     ], AppComponent);
     return AppComponent;
 }());

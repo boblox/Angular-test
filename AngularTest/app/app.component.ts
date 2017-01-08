@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Greeter } from './greeter.service';
+import { GreeterService as Greeter } from './service/greeter.service';
 
 //==================================================
 interface IMyInterface1 {

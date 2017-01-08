@@ -1,0 +1,89 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic');
+
+@import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+
+body {
+    background: url('img/bg5.jpg');
+    /*background-size: 255px auto;*/
+    background-size: 110px auto;
+}
+
+/*.main-wrapper {
+    .background {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}*/
+
+.tv-content-wrapper {
+    margin: 4rem 0;
+    /*background: url('img/aquaTV.gif');
+    background-size: 100% auto;
+    height: 80vh;*/
+    position: relative;
+
+    .background {
+        /*width: 100%;*/
+        /*height: 100%;*/
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+
+        img {
+            @include img-fluid();
+        }
+    }
+}
+
+.wish-search-content {
+    /*margin: 4em 0;*/
+    /*display: inline-block;*/
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    top: 195px;
+    left: 145px;
+    width: 633px;
+    height: 470px;
+    /*margin: 200px 0 0 145px;*/
+    padding: 1.4rem;
+    @include border-radius(35px);
+    overflow: hidden;
+    transform: rotateZ(-1deg);
+    /*main-app {
+        display: block;
+        height: 100%;
+    }*/
+    h2 {
+    }
+
+    .search-form {
+        /*margin-top: 2rem;*/
+    }
+
+    .search-result {
+        margin-top: 2rem;
+        /*max-height: 100%;*/
+        img {
+            max-height: 220px;
+            @include border-radius(15px);
+        }
+    }
+}
+
+.user-info-content {
+    position: absolute;
+    top: 29px;
+    right: 470px;
+    transform: rotateZ(-1.5deg);
+    color: white;
+}

@@ -100,12 +100,6 @@
     <Content Include="app\app.component.js.map">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
-    <Content Include="app\app.component.spec.js">
-      <DependentUpon>app.component.spec.ts</DependentUpon>
-    </Content>
-    <Content Include="app\app.component.spec.js.map">
-      <DependentUpon>app.component.spec.ts</DependentUpon>
-    </Content>
     <Content Include="app\app.module.js">
       <DependentUpon>app.module.ts</DependentUpon>
     </Content>
@@ -118,10 +112,16 @@
     <Content Include="app\child.component.js">
       <DependentUpon>child.component.ts</DependentUpon>
     </Content>
-    <Content Include="app\greeter.service.js">
+    <Content Include="app\main.component.html">
+      <DependentUpon>main.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\main.component.js">
+      <DependentUpon>main.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\service\greeter.service.js">
       <DependentUpon>greeter.service.ts</DependentUpon>
     </Content>
-    <Content Include="app\greeter.service.js.map">
+    <Content Include="app\service\greeter.service.js.map">
       <DependentUpon>greeter.service.ts</DependentUpon>
     </Content>
     <Content Include="app\main.js">
@@ -130,8 +130,36 @@
     <Content Include="app\main.js.map">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
+    <Content Include="app\service\wish.service.js">
+      <DependentUpon>wish.service.ts</DependentUpon>
+    </Content>
+    <Content Include="app\service\wish.service.model.js">
+      <DependentUpon>wish.service.model.ts</DependentUpon>
+    </Content>
+    <Content Include="app\user.info.component.html">
+      <DependentUpon>user.info.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\user.info.component.js">
+      <DependentUpon>user.info.component.ts</DependentUpon>
+    </Content>
+    <Content Include="css\img\aquaTV.gif" />
+    <Content Include="css\img\bg1.JPG" />
+    <Content Include="css\img\bg2.jpg" />
+    <Content Include="css\img\bg3.jpg" />
+    <Content Include="css\img\bg4.jpg" />
+    <Content Include="css\img\bg5.jpg" />
+    <Content Include="css\img\not-found.jpg" />
+    <Content Include="css\site.css">
+      <DependentUpon>site.scss</DependentUpon>
+    </Content>
+    <Content Include="css\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="package.old.json">
+      <DependentUpon>package.json</DependentUpon>
+    </Content>
     <Content Include="styles.css" />
     <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
@@ -153,6 +181,25 @@
     <Content Include="app\child.component.js.map">
       <DependentUpon>child.component.ts</DependentUpon>
     </Content>
+    <Content Include="css\main.scss" />
+    <Content Include="css\site.scss" />
+    <Content Include="app\service\wish.service.js.map">
+      <DependentUpon>wish.service.ts</DependentUpon>
+    </Content>
+    <Content Include="app\service\wish.service.model.js.map">
+      <DependentUpon>wish.service.model.ts</DependentUpon>
+    </Content>
+    <Content Include="app\main.component.js.map">
+      <DependentUpon>main.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\user.info.component.js.map">
+      <DependentUpon>user.info.component.ts</DependentUpon>
+    </Content>
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="css\variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -166,12 +213,15 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\greeter.service.ts" />
+    <TypeScriptCompile Include="app\service\wish.service.model.ts" />
+    <TypeScriptCompile Include="app\service\greeter.service.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\child.component.ts" />
+    <TypeScriptCompile Include="app\main.component.ts" />
+    <TypeScriptCompile Include="app\service\wish.service.ts" />
+    <TypeScriptCompile Include="app\user.info.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

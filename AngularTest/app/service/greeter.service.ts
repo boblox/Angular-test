@@ -1,7 +1,7 @@
 ﻿import { Injectable } from '@angular/core';
 
 @Injectable()
-export class Greeter {
+export class GreeterService {
     public message = 'Registering Providers while Bootstrapping an Angular 2 application!';
     private bob: string;
 }
