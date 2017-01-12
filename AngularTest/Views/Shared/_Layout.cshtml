@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Святий Миколай</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="/">
+
+    <link rel="stylesheet" href="css/site.css">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script> <!--Can be deleted-->
+    <script src="node_modules/zone.js/dist/zone.js"></script> <!--Can be deleted-->
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="scripts/systemjs.config.js"></script>
+    @RenderSection("Scripts")
+</head>
+<body>
+    <main class="main-wrapper">
+        <div class="container">
+            @RenderBody()
+        </div>
+    </main>
+</body>
+</html>

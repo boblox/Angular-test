@@ -97,32 +97,26 @@
     <Content Include="app\app.component.js">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
-    <Content Include="app\app.component.js.map">
-      <DependentUpon>app.component.ts</DependentUpon>
-    </Content>
     <Content Include="app\app.module.js">
       <DependentUpon>app.module.ts</DependentUpon>
     </Content>
     <Content Include="app\app.module.js.map">
       <DependentUpon>app.module.ts</DependentUpon>
     </Content>
-    <Content Include="app\child.component.html">
-      <DependentUpon>child.component.ts</DependentUpon>
+    <Content Include="app\app.routes.js">
+      <DependentUpon>app.routes.ts</DependentUpon>
     </Content>
-    <Content Include="app\child.component.js">
-      <DependentUpon>child.component.ts</DependentUpon>
+    <Content Include="app\coder\coder.component.html">
+      <DependentUpon>coder.component.ts</DependentUpon>
     </Content>
-    <Content Include="app\main.component.html">
-      <DependentUpon>main.component.ts</DependentUpon>
+    <Content Include="app\coder\coder.component.js">
+      <DependentUpon>coder.component.ts</DependentUpon>
     </Content>
-    <Content Include="app\main.component.js">
-      <DependentUpon>main.component.ts</DependentUpon>
+    <Content Include="app\coder\coder.module.js">
+      <DependentUpon>coder.module.ts</DependentUpon>
     </Content>
-    <Content Include="app\service\greeter.service.js">
-      <DependentUpon>greeter.service.ts</DependentUpon>
-    </Content>
-    <Content Include="app\service\greeter.service.js.map">
-      <DependentUpon>greeter.service.ts</DependentUpon>
+    <Content Include="app\shared\coder.service.js">
+      <DependentUpon>coder.service.ts</DependentUpon>
     </Content>
     <Content Include="app\main.js">
       <DependentUpon>main.ts</DependentUpon>
@@ -130,17 +124,38 @@
     <Content Include="app\main.js.map">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
-    <Content Include="app\service\wish.service.js">
+    <Content Include="app\tv\date.component.html">
+      <DependentUpon>date.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\date.component.js">
+      <DependentUpon>date.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\search.component.html">
+      <DependentUpon>search.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\search.component.js">
+      <DependentUpon>search.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\tv.component.html">
+      <DependentUpon>tv.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\tv.component.js">
+      <DependentUpon>tv.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\tv.module.js">
+      <DependentUpon>tv.module.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\user-info.component.html">
+      <DependentUpon>user-info.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\user-info.component.js">
+      <DependentUpon>user-info.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\wish.service.js">
       <DependentUpon>wish.service.ts</DependentUpon>
     </Content>
-    <Content Include="app\service\wish.service.model.js">
+    <Content Include="app\tv\wish.service.model.js">
       <DependentUpon>wish.service.model.ts</DependentUpon>
-    </Content>
-    <Content Include="app\user.info.component.html">
-      <DependentUpon>user.info.component.ts</DependentUpon>
-    </Content>
-    <Content Include="app\user.info.component.js">
-      <DependentUpon>user.info.component.ts</DependentUpon>
     </Content>
     <Content Include="css\img\aquaTV.gif" />
     <Content Include="css\img\bg1.JPG" />
@@ -148,6 +163,7 @@
     <Content Include="css\img\bg3.jpg" />
     <Content Include="css\img\bg4.jpg" />
     <Content Include="css\img\bg5.jpg" />
+    <Content Include="css\img\loader.gif" />
     <Content Include="css\img\not-found.jpg" />
     <Content Include="css\site.css">
       <DependentUpon>site.scss</DependentUpon>
@@ -156,16 +172,16 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
-    <Content Include="index.html" />
     <Content Include="package.old.json">
       <DependentUpon>package.json</DependentUpon>
     </Content>
     <Content Include="styles.css" />
-    <Content Include="systemjs.config.js" />
+    <Content Include="scripts\systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,28 +194,51 @@
     </Content>
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
-    <Content Include="app\child.component.js.map">
-      <DependentUpon>child.component.ts</DependentUpon>
-    </Content>
     <Content Include="css\main.scss" />
     <Content Include="css\site.scss" />
-    <Content Include="app\service\wish.service.js.map">
+    <Content Include="app\tv\wish.service.js.map">
       <DependentUpon>wish.service.ts</DependentUpon>
     </Content>
-    <Content Include="app\service\wish.service.model.js.map">
+    <Content Include="app\tv\wish.service.model.js.map">
       <DependentUpon>wish.service.model.ts</DependentUpon>
     </Content>
-    <Content Include="app\main.component.js.map">
-      <DependentUpon>main.component.ts</DependentUpon>
+    <Content Include="app\app.routes.js.map">
+      <DependentUpon>app.routes.ts</DependentUpon>
     </Content>
-    <Content Include="app\user.info.component.js.map">
-      <DependentUpon>user.info.component.ts</DependentUpon>
+    <Content Include="app\tv\user-info.component.js.map">
+      <DependentUpon>user-info.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\tv.component.js.map">
+      <DependentUpon>tv.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\search.component.js.map">
+      <DependentUpon>search.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\app.component.js.map">
+      <DependentUpon>app.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\tv.module.js.map">
+      <DependentUpon>tv.module.ts</DependentUpon>
+    </Content>
+    <Content Include="app\coder\coder.component.js.map">
+      <DependentUpon>coder.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\coder\coder.module.js.map">
+      <DependentUpon>coder.module.ts</DependentUpon>
+    </Content>
+    <Content Include="app\shared\coder.service.js.map">
+      <DependentUpon>coder.service.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\date.component.js.map">
+      <DependentUpon>date.component.ts</DependentUpon>
     </Content>
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="css\variables.scss" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -209,19 +248,23 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\service\wish.service.model.ts" />
-    <TypeScriptCompile Include="app\service\greeter.service.ts" />
+    <TypeScriptCompile Include="app\app.routes.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\coder\coder.module.ts" />
+    <TypeScriptCompile Include="app\coder\coder.component.ts" />
+    <TypeScriptCompile Include="app\shared\coder.service.ts" />
+    <TypeScriptCompile Include="app\tv\date.component.ts" />
+    <TypeScriptCompile Include="app\tv\tv.component.ts" />
+    <TypeScriptCompile Include="app\tv\tv.module.ts" />
+    <TypeScriptCompile Include="app\tv\wish.service.model.ts" />
     <TypeScriptCompile Include="app\main.ts" />
-    <TypeScriptCompile Include="app\child.component.ts" />
-    <TypeScriptCompile Include="app\main.component.ts" />
-    <TypeScriptCompile Include="app\service\wish.service.ts" />
-    <TypeScriptCompile Include="app\user.info.component.ts" />
+    <TypeScriptCompile Include="app\tv\search.component.ts" />
+    <TypeScriptCompile Include="app\tv\wish.service.ts" />
+    <TypeScriptCompile Include="app\tv\user-info.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

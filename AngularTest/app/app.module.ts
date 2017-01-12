@@ -1,24 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { routing, appRoutingProviders } from './app.routes';
 
-//import { AppComponent } from './app.component';
-//import { ChildComponent } from './child.component';
-//import { Greeter } from './greeter.service';
-
-import { MainComponent } from './main.component';
-import { UserInfoComponent } from './user.info.component';
-import { WishService } from './service/wish.service';
+import { AppComponent } from './app.component';
+import { TVModule } from './tv/tv.module';
+import { CoderModule } from './coder/coder.module';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpModule],
-    //declarations: [AppComponent, ChildComponent],
-    declarations: [MainComponent, UserInfoComponent],
-    //bootstrap: [AppComponent],
-    bootstrap: [MainComponent],
-    //providers: [Greeter],
-    providers: [WishService]
+    imports: [BrowserModule, routing, TVModule, CoderModule],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent],
+    providers: [appRoutingProviders]
 })
 export class AppModule {
 }

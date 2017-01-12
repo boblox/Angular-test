@@ -10,26 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var http_1 = require('@angular/http');
-//import { AppComponent } from './app.component';
-//import { ChildComponent } from './child.component';
-//import { Greeter } from './greeter.service';
-var main_component_1 = require('./main.component');
-var user_info_component_1 = require('./user.info.component');
-var wish_service_1 = require('./service/wish.service');
+var app_routes_1 = require('./app.routes');
+var app_component_1 = require('./app.component');
+var tv_module_1 = require('./tv/tv.module');
+var coder_module_1 = require('./coder/coder.module');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, forms_1.ReactiveFormsModule, http_1.HttpModule],
-            //declarations: [AppComponent, ChildComponent],
-            declarations: [main_component_1.MainComponent, user_info_component_1.UserInfoComponent],
-            //bootstrap: [AppComponent],
-            bootstrap: [main_component_1.MainComponent],
-            //providers: [Greeter],
-            providers: [wish_service_1.WishService]
+            imports: [platform_browser_1.BrowserModule, app_routes_1.routing, tv_module_1.TVModule, coder_module_1.CoderModule],
+            declarations: [app_component_1.AppComponent],
+            bootstrap: [app_component_1.AppComponent],
+            providers: [app_routes_1.appRoutingProviders]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

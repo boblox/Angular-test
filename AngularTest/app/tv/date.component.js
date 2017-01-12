@@ -9,17 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var DateComponent = (function () {
+    function DateComponent() {
+        var _this = this;
+        this.text = "День Святого Миколая";
+        this.date = new Date();
+        setInterval(function () {
+            _this.date = new Date();
+        }, 1000);
     }
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], DateComponent.prototype, "format", void 0);
+    DateComponent = __decorate([
         core_1.Component({
-            selector: 'app-component',
-            templateUrl: 'app/app.component.html'
+            selector: 'date-component',
+            //moduleId: module.id,
+            templateUrl: 'app/tv/date.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], DateComponent);
+    return DateComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.DateComponent = DateComponent;
+//# sourceMappingURL=date.component.js.map

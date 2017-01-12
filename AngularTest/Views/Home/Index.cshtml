@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+@section Scripts{
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+}
+
+<app-component>
+    <div class="load-spinner">
+        <img src="/css/img/loader.gif" />
+        <h2>Заждіт троха...)</h2>
+    </div>
+</app-component>

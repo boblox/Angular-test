@@ -9,17 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var coder_service_1 = require('../shared/coder.service');
+var CoderComponent = (function () {
+    function CoderComponent(coder) {
+        this.coder = coder;
+        this.decodedPlaceholder = "Enter decoded text here";
+        this.encodedPlaceholder = "Encoded text will appear here";
     }
-    AppComponent = __decorate([
+    CoderComponent.prototype.encode = function (s) {
+        return this.coder.encode(s);
+    };
+    CoderComponent = __decorate([
         core_1.Component({
-            selector: 'app-component',
-            templateUrl: 'app/app.component.html'
+            selector: 'coder-component',
+            //moduleId: module.id,
+            templateUrl: 'app/coder/coder.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [coder_service_1.CoderService])
+    ], CoderComponent);
+    return CoderComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CoderComponent = CoderComponent;
+//# sourceMappingURL=coder.component.js.map

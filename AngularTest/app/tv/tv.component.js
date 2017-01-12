@@ -9,17 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+//import { RouterModule, Routes } from '@angular/router';
+var TVComponent = (function () {
+    function TVComponent() {
     }
-    AppComponent = __decorate([
+    TVComponent = __decorate([
         core_1.Component({
-            selector: 'app-component',
-            templateUrl: 'app/app.component.html'
+            selector: 'tv-component',
+            //moduleId: module.id,
+            templateUrl: 'app/tv/tv.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], TVComponent);
+    return TVComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.TVComponent = TVComponent;
+//# sourceMappingURL=tv.component.js.map

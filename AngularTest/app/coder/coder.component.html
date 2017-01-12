@@ -1,0 +1,9 @@
+﻿<div class="coder-container">
+    <h1>Coder</h1>
+    <div class="form-inline">
+        <input [(ngModel)]="decodedText" class="form-control form-control-lg"
+               type="text" [placeholder]="decodedPlaceholder" />
+        <input [ngModel]="encode(decodedText)" class="form-control form-control-lg" 
+               type="text" readonly="readonly" [placeholder]="encodedPlaceholder"/>
+    </div>
+</div>
