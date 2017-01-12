@@ -1,1 +1,1 @@
-# Angular-test
+# Mykolaj troll project
