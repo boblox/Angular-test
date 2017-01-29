@@ -124,6 +124,15 @@
     <Content Include="app\main.js.map">
       <DependentUpon>main.ts</DependentUpon>
     </Content>
+    <Content Include="app\shared\loading-spinner.component.html">
+      <DependentUpon>loading-spinner.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\shared\loading-spinner.component.js">
+      <DependentUpon>loading-spinner.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\shared\loading.service.js">
+      <DependentUpon>loading.service.ts</DependentUpon>
+    </Content>
     <Content Include="app\tv\date.component.html">
       <DependentUpon>date.component.ts</DependentUpon>
     </Content>
@@ -158,10 +167,6 @@
       <DependentUpon>wish.service.model.ts</DependentUpon>
     </Content>
     <Content Include="css\img\aquaTV.gif" />
-    <Content Include="css\img\bg1.JPG" />
-    <Content Include="css\img\bg2.jpg" />
-    <Content Include="css\img\bg3.jpg" />
-    <Content Include="css\img\bg4.jpg" />
     <Content Include="css\img\bg5.jpg" />
     <Content Include="css\img\loader.gif" />
     <Content Include="css\img\not-found.jpg" />
@@ -231,6 +236,12 @@
     <Content Include="app\tv\date.component.js.map">
       <DependentUpon>date.component.ts</DependentUpon>
     </Content>
+    <Content Include="app\shared\loading-spinner.component.js.map">
+      <DependentUpon>loading-spinner.component.ts</DependentUpon>
+    </Content>
+    <Content Include="app\shared\loading.service.js.map">
+      <DependentUpon>loading.service.ts</DependentUpon>
+    </Content>
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -238,13 +249,16 @@
     <Content Include="css\variables.scss" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.wpp.targets" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +271,8 @@
     <TypeScriptCompile Include="app\coder\coder.module.ts" />
     <TypeScriptCompile Include="app\coder\coder.component.ts" />
     <TypeScriptCompile Include="app\shared\coder.service.ts" />
+    <TypeScriptCompile Include="app\shared\loading-spinner.component.ts" />
+    <TypeScriptCompile Include="app\shared\loading.service.ts" />
     <TypeScriptCompile Include="app\tv\date.component.ts" />
     <TypeScriptCompile Include="app\tv\tv.component.ts" />
     <TypeScriptCompile Include="app\tv\tv.module.ts" />

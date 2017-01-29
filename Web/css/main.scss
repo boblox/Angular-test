@@ -39,10 +39,22 @@ body {
     }
 
     .search-form {
+        .form-control {
+            padding: 0.5rem 0.5rem;
+        }
+
+        input[type="text"] {
+            width: 10rem;
+        }
+
+        select {
+            width: 10rem;
+        }
     }
 
     .search-result {
         margin-top: 2rem;
+
         img {
             max-height: 220px;
             @include border-radius(15px);

@@ -12,17 +12,19 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_routes_1 = require('./app.routes');
 var app_component_1 = require('./app.component');
+var loading_spinner_component_1 = require('./shared/loading-spinner.component');
 var tv_module_1 = require('./tv/tv.module');
 var coder_module_1 = require('./coder/coder.module');
+var loading_service_1 = require('./shared/loading.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, app_routes_1.routing, tv_module_1.TVModule, coder_module_1.CoderModule],
-            declarations: [app_component_1.AppComponent],
+            declarations: [app_component_1.AppComponent, loading_spinner_component_1.LoadingSpinnerComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [app_routes_1.appRoutingProviders]
+            providers: [app_routes_1.appRoutingProviders, loading_service_1.LoadingService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

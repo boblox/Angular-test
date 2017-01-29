@@ -1,12 +1,20 @@
 ﻿<div class="wish-search-content">
     <p class="lead">{{headerText}}</p>
     <form #searchForm="ngForm" class="form-inline search-form" (ngSubmit)="search(searchForm)">
-        <select class="form-control" name="wishSelect" [(ngModel)]="wishInput.type">
-            <option *ngFor="let wish of wishSelect" [value]="wish.type">
-                {{ wish.text }}
+        <select #wishTypeInput class="form-control" name="wishTypeSelect" (change)="onWishTypeChange(wishTypeInput.value)" 
+                [(ngModel)]="wishInput.type">
+            <option *ngFor="let item of wishTypes" [value]="item.type">
+                {{ item.displayText }}
             </option>
         </select>
-        <input [(ngModel)]="wishInput.searchText" name="searchText" class="form-control" type="text" [placeholder]="searchPlaceholder" />
+        <select #wishTypeChoiceInput class="form-control" name="wishTypeChoiceSelect" (change)="onWishTypeChoiceChange(wishTypeChoiceInput.value)" 
+                [(ngModel)]="wishInput.typeChoice">
+            <option *ngFor="let item of wishTypeChoices[wishInput.type]" [value]="item.type">
+                {{ item.displayText }}
+            </option>
+        </select>
+        <input [(ngModel)]="wishInput.searchText" name="searchText" class="form-control" 
+               type="text" [placeholder]="searchPlaceholder" *ngIf="isSearchTextVisible(wishInput.typeChoice)"/>
         <button type="submit" class="btn btn-primary">{{buttonSubmitText}}</button>
     </form>
     <div class="search-result">

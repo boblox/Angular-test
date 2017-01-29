@@ -11,68 +11,73 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/map');
-//import { Observable } from 'rxjs/Observable';
 //import 'rxjs/Rx';
 var wish_service_model_1 = require('./wish.service.model');
 exports.WishResult = wish_service_model_1.WishResult;
 exports.WishInput = wish_service_model_1.WishInput;
 exports.WishType = wish_service_model_1.WishType;
+exports.WantToHaveChoice = wish_service_model_1.WantToHaveChoice;
+exports.WantToLearnChoice = wish_service_model_1.WantToLearnChoice;
+exports.WantToBeChoice = wish_service_model_1.WantToBeChoice;
+exports.WantToMakeGiftChoice = wish_service_model_1.WantToMakeGiftChoice;
 var WishService = (function () {
     function WishService(http) {
         this.http = http;
         this.notFoundUrl = 'css/img/not-found.jpg';
-        var text = "Звиняйте, Миколайко нічого для вас не знайшов:(";
-        this.notFoundResult = new wish_service_model_1.WishResult(this.notFoundUrl, text);
+        this.textResolvers = this.getTextResolvers();
     }
-    WishService.prototype.getRandomItem = function (items) {
-        var index = Math.floor(Math.random() * items.length);
-        return items[index];
+    WishService.prototype.getTextResolvers = function () {
+        return (_a = {},
+            _a[wish_service_model_1.WishType.WantToHave] = new wish_service_model_1.WantToHaveTextResolver(),
+            _a[wish_service_model_1.WishType.WantToBe] = new wish_service_model_1.WantToBeTextResolver(),
+            _a[wish_service_model_1.WishType.WantToLearn] = new wish_service_model_1.WantToLearnTextResolver(),
+            _a[wish_service_model_1.WishType.WantToMakeGift] = new wish_service_model_1.WantToMakeGiftTextResolver(),
+            _a
+        );
+        var _a;
     };
-    WishService.prototype.getSuccessResultText = function (input) {
-        var resultText;
-        var wantToHaveTemplates = new wish_service_model_1.WantToHaveTemplates(input).templates;
-        var wantToLearnTemplates = new wish_service_model_1.WantToLearnTemplates(input).templates;
-        var wantToMakeGift = new wish_service_model_1.WantToMakeGift(input).templates;
-        switch (Number(input.type)) {
-            case wish_service_model_1.WishType.WantToHave:
-                resultText = this.getRandomItem(wantToHaveTemplates);
-                break;
-            case wish_service_model_1.WishType.WantToLearn:
-                resultText = this.getRandomItem(wantToLearnTemplates);
-                break;
-            case wish_service_model_1.WishType.WantToMakeGift:
-                resultText = this.getRandomItem(wantToMakeGift);
-            default:
-        }
-        return resultText;
+    WishService.prototype.getNotFoundResult = function (input) {
+        return new wish_service_model_1.WishResult(this.notFoundUrl, this.getFailureText(input));
     };
-    WishService.prototype.raiseResult = function (callback, result) {
-        setTimeout(function () { return callback(result); }, 2000);
+    WishService.prototype.getSuccessText = function (input) {
+        return this.textResolvers[input.type].getSuccessText(input);
     };
-    WishService.prototype.getWish = function (input, callback) {
+    WishService.prototype.getFailureText = function (input) {
+        return this.textResolvers[input.type].getFailureText(input);
+    };
+    WishService.prototype.raiseResult = function (resolve, result) {
+        setTimeout(function () { return resolve(result); }, 2000);
+    };
+    WishService.prototype.getWish = function (input, testMode) {
         var _this = this;
-        var searchText = encodeURIComponent(input.searchText);
-        //let url =
-        //    `https://www.googleapis.com/customsearch/v1?key=AIzaSyC1n9wpvVqUDUCyN4G9zwmUeZhmSHR0Oaw` +
-        //    `&cx=007634069652725397483:o1ur-qeu6tc&searchType=image&q=${searchText}`;
-        var url = "https://pixabay.com/api/?key=4077546-5b7acad1ea019ee9cec49f73f&q=" + searchText;
-        var resultItem;
-        //alert(url);
-        this.http.get(url)
-            .map(function (data) { return data.json(); })
-            .subscribe(function (data) {
-            if (data.hits && data.hits.length > 0) {
-                var index = Math.floor(Math.random() * Math.min(20, data.totalHits));
-                var text = _this.getSuccessResultText(input);
-                resultItem = new wish_service_model_1.WishResult(data.hits[index].webformatURL, text);
+        if (testMode === void 0) { testMode = false; }
+        return new Promise(function (resolve, reject) {
+            if (testMode) {
+                _this.raiseResult(resolve, new wish_service_model_1.WishResult(_this.notFoundUrl, _this.getSuccessText(input)));
             }
             else {
-                resultItem = _this.notFoundResult;
+                var resultItem_1;
+                var searchText = encodeURIComponent(input.searchText);
+                //let url =
+                //    `https://www.googleapis.com/customsearch/v1?key=AIzaSyC1n9wpvVqUDUCyN4G9zwmUeZhmSHR0Oaw` +
+                //    `&cx=007634069652725397483:o1ur-qeu6tc&searchType=image&q=${searchText}`;
+                var url = "https://pixabay.com/api/?key=4077546-5b7acad1ea019ee9cec49f73f&q=" + searchText;
+                _this.http.get(url)
+                    .map(function (data) { return data.json(); })
+                    .subscribe(function (data) {
+                    if (data.hits && data.hits.length > 0) {
+                        var index = Math.floor(Math.random() * Math.min(20, data.totalHits));
+                        resultItem_1 = new wish_service_model_1.WishResult(data.hits[index].webformatURL, _this.getSuccessText(input));
+                    }
+                    else {
+                        resultItem_1 = _this.getNotFoundResult(input);
+                    }
+                }, function () {
+                    _this.raiseResult(resolve, _this.getNotFoundResult(input));
+                }, function () {
+                    _this.raiseResult(resolve, resultItem_1);
+                });
             }
-        }, function (error) {
-            _this.raiseResult(callback, _this.notFoundResult);
-        }, function () {
-            _this.raiseResult(callback, resultItem);
         });
     };
     WishService = __decorate([
