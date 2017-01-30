@@ -1,26 +1,30 @@
 ﻿<div class="wish-search-content">
     <p class="lead">{{headerText}}</p>
     <form #searchForm="ngForm" class="form-inline search-form" (ngSubmit)="search(searchForm)">
-        <select #wishTypeInput class="form-control" name="wishTypeSelect" (change)="onWishTypeChange(wishTypeInput.value)" 
+        <select #wishTypeInput class="form-control" name="wishTypeSelect" (change)="onWishTypeChange(wishTypeInput.value)"
                 [(ngModel)]="wishInput.type">
             <option *ngFor="let item of wishTypes" [value]="item.type">
                 {{ item.displayText }}
             </option>
         </select>
-        <select #wishTypeChoiceInput class="form-control" name="wishTypeChoiceSelect" (change)="onWishTypeChoiceChange(wishTypeChoiceInput.value)" 
+        <select #wishTypeChoiceInput class="form-control" name="wishTypeChoiceSelect" (change)="onWishTypeChoiceChange(wishTypeChoiceInput.value)"
                 [(ngModel)]="wishInput.typeChoice">
             <option *ngFor="let item of wishTypeChoices[wishInput.type]" [value]="item.type">
                 {{ item.displayText }}
             </option>
         </select>
-        <input [(ngModel)]="wishInput.searchText" name="searchText" class="form-control" 
-               type="text" [placeholder]="searchPlaceholder" *ngIf="isSearchTextVisible(wishInput.typeChoice)"/>
-        <button type="submit" class="btn btn-primary">{{buttonSubmitText}}</button>
+        <input [(ngModel)]="wishInput.searchText" name="searchText" class="form-control"
+               type="text" [placeholder]="searchPlaceholder" *ngIf="isSearchTextVisible(wishInput.typeChoice)" />
+        <div class="text-xs-center d-inline-block">
+            <button type="submit" class="btn btn-primary">{{buttonSubmitText}}</button>
+        </div>
     </form>
     <div class="search-result">
         <div class="row" *ngIf="wishResult.imageUrl">
             <div class="col-xs-12 col-sm-6">
-                <img src="{{wishResult.imageUrl}}" class="img-fluid" alt="" />
+                <div class="text-xs-center">
+                    <img src="{{wishResult.imageUrl}}" class="img-fluid" alt="" />
+                </div>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <p class="lead">{{wishResult.text}}</p>

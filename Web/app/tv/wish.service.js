@@ -55,6 +55,9 @@ var WishService = (function () {
             if (testMode) {
                 _this.raiseResult(resolve, new wish_service_model_1.WishResult(_this.notFoundUrl, _this.getSuccessText(input)));
             }
+            else if (!input.searchText) {
+                _this.raiseResult(resolve, new wish_service_model_1.WishResult(_this.notFoundUrl, _this.getSuccessText(input)));
+            }
             else {
                 var resultItem_1;
                 var searchText = encodeURIComponent(input.searchText);

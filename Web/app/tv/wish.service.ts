@@ -54,7 +54,10 @@ export class WishService {
     getWish(input: WishInput, testMode: boolean = false): Promise<WishResult> {
         return new Promise<WishResult>((resolve: any, reject: any) => {
             if (testMode) {
-                this.raiseResult(resolve, new WishResult(this.notFoundUrl, this.getSuccessText(input));
+                this.raiseResult(resolve, new WishResult(this.notFoundUrl, this.getSuccessText(input)));
+            }
+            else if (!input.searchText) {
+                this.raiseResult(resolve, new WishResult(this.notFoundUrl, this.getSuccessText(input)));
             }
             else {
                 let resultItem: WishResult;

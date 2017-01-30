@@ -1,6 +1,13 @@
 ﻿/*@import url('https://fonts.googleapis.com/css?family=Marmelad&subset=cyrillic');*/
 
 @import url('https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic');
+@import "variables";
+
+@include media-breakpoint-only(lg) {
+    html {
+        font-size: 14px;
+    }
+}
 
 body {
     background: url('img/bg5.jpg');
@@ -24,12 +31,29 @@ body {
 }
 
 .wish-search-content {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.4);
-    top: 195px;
-    left: 145px;
-    width: 633px;
-    height: 470px;
+    @include media-breakpoint-down(md) {
+        background: $light-yellow;
+    }
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    @include media-breakpoint-only(lg) {
+        top: 159px;
+        left: 125px;
+        width: 528px;
+        height: 401px;
+    }
+
+    @include media-breakpoint-only(xl) {
+        top: 195px;
+        left: 145px;
+        width: 633px;
+        height: 470px;
+    }
+
     padding: 1.4rem;
     @include border-radius(35px);
     overflow: hidden;
@@ -43,43 +67,111 @@ body {
             padding: 0.5rem 0.5rem;
         }
 
-        input[type="text"] {
-            width: 10rem;
+        @include media-breakpoint-down(md) {
+            input[type="text"], select {
+                width: 100%;
+                margin-bottom: .8rem;
+            }
         }
 
-        select {
-            width: 10rem;
+        @include media-breakpoint-only(lg) {
+            input[type="text"], select {
+                width: 9.5rem;
+            }
+        }
+
+        @include media-breakpoint-only(xl) {
+            input[type="text"], select {
+                width: 10rem;
+            }
         }
     }
 
     .search-result {
         margin-top: 2rem;
+        @include border-radius(15px);
 
         img {
-            max-height: 220px;
-            @include border-radius(15px);
+            margin-bottom: 1rem;
+            @include box-shadow(0 0 25px 3px black);
+            transform: rotateZ(2deg);
+
+            @include media-breakpoint-only(lg) {
+                max-height: 155px;
+            }
+
+            @include media-breakpoint-only(xl) {
+                max-height: 220px;
+            }
         }
     }
 }
 
 .user-info-content {
-    position: absolute;
-    top: 29px;
-    right: 470px;
+    @include media-breakpoint-down(md) {
+        color: orangered;
+        background: $light-yellow;
+        @include border-radius(35px);
+        padding: 2rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        color: white;
+    }
+
+    @include media-breakpoint-only(lg) {
+        top: 27px;
+        right: 380px;
+    }
+
+    @include media-breakpoint-only(xl) {
+        top: 29px;
+        right: 470px;
+    }
+
     transform: rotateZ(-1.5deg);
-    color: white;
+}
+
+date-component {
+    @include media-breakpoint-down(md) {
+        display: block;
+        text-align: right;
+    }
 }
 
 .date-content {
-    position: absolute;
     display: inline-block;
-    top: 576px;
-    left: 851px;
+
+    @include media-breakpoint-down(md) {
+        transform: rotateZ(2.5deg);
+        margin: 1rem 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+        position: absolute;
+        transform: rotateZ(0.7deg);
+    }
+
+    @include media-breakpoint-only(lg) {
+        top: 485px;
+        left: 712px;
+    }
+
+    @include media-breakpoint-only(xl) {
+        top: 576px;
+        left: 851px;
+    }
+
     padding: .5rem;
+
+    @include media-breakpoint-only(lg) {
+        padding: .3rem;
+    }
+
     background: rgba(185, 185, 185, 1);
     @include border-radius(3px);
     border: 1px solid black;
-    transform: rotateZ(0.7deg);
 
     div:last-child {
         margin-left: .4rem;
@@ -90,7 +182,7 @@ body {
     position: fixed;
     left: 50vw;
     top: 50vh;
-    transform: translate(-195px, -60px);
+    transform: translate(-175px, -60px);
     z-index: 10;
     color: orangered;
     display: flex;
@@ -119,7 +211,7 @@ coder-component {
         margin-top: 35vh;
         text-align: center;
         color: orangered;
-        background: rgba(255, 255, 200, 0.9);
+        background: $light-yellow;
         @include border-radius(35px);
         padding: 2rem;
 

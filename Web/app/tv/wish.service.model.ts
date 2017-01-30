@@ -44,6 +44,7 @@ export class WantToHaveTextResolver extends WishTextResolverBase {
 
         switch (<WantToHaveChoice>(Number(input.typeChoice))) {
             case WantToHaveChoice.Other:
+                if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToHaveChoice.All:
                 return `Нічо сє, а не забагато хочеш?`;
@@ -71,6 +72,7 @@ export class WantToBeTextResolver extends WishTextResolverBase {
 
         switch (<WantToBeChoice>(Number(input.typeChoice))) {
             case WantToBeChoice.Other:
+                if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToBeChoice.Everything:
                 return `Хочеш стати всесвітом? Будьласочка)`;
@@ -98,6 +100,7 @@ export class WantToLearnTextResolver extends WishTextResolverBase {
 
         switch (<WantToLearnChoice>(Number(input.typeChoice))) {
             case WantToLearnChoice.Other:
+                if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToLearnChoice.All:
                 return `Огогошечки, прям отак хочеш знати все?`;
@@ -121,6 +124,7 @@ export class WantToMakeGiftTextResolver extends WishTextResolverBase {
 
         switch (<WantToMakeGiftChoice>(Number(input.typeChoice))) {
             case WantToMakeGiftChoice.Other:
+                if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToMakeGiftChoice.LoveAndWarmth:
                 return `Любов І тепло, мімімі`;

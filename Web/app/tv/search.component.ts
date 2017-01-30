@@ -95,7 +95,7 @@ export class SearchComponent {
     
     search(form: NgForm) {
         this.loadingService.showLoadingIndicator();
-        this.wishService.getWish(this.wishInput, true)
+        this.wishService.getWish(this.wishInput)
             .then((result) => {
                 this.loadingService.hideLoadingIndicator();
                 this.wishResult = result;

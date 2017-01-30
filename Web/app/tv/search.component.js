@@ -86,7 +86,7 @@ var SearchComponent = (function () {
     SearchComponent.prototype.search = function (form) {
         var _this = this;
         this.loadingService.showLoadingIndicator();
-        this.wishService.getWish(this.wishInput, true)
+        this.wishService.getWish(this.wishInput)
             .then(function (result) {
             _this.loadingService.hideLoadingIndicator();
             _this.wishResult = result;

@@ -82,6 +82,8 @@ var WantToHaveTextResolver = (function (_super) {
         ];
         switch ((Number(input.typeChoice))) {
             case WantToHaveChoice.Other:
+                if (!input.searchText)
+                    return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToHaveChoice.All:
                 return "\u041D\u0456\u0447\u043E \u0441\u0454, \u0430 \u043D\u0435 \u0437\u0430\u0431\u0430\u0433\u0430\u0442\u043E \u0445\u043E\u0447\u0435\u0448?";
@@ -112,6 +114,8 @@ var WantToBeTextResolver = (function (_super) {
         ];
         switch ((Number(input.typeChoice))) {
             case WantToBeChoice.Other:
+                if (!input.searchText)
+                    return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToBeChoice.Everything:
                 return "\u0425\u043E\u0447\u0435\u0448 \u0441\u0442\u0430\u0442\u0438 \u0432\u0441\u0435\u0441\u0432\u0456\u0442\u043E\u043C? \u0411\u0443\u0434\u044C\u043B\u0430\u0441\u043E\u0447\u043A\u0430)";
@@ -140,6 +144,8 @@ var WantToLearnTextResolver = (function (_super) {
         ];
         switch ((Number(input.typeChoice))) {
             case WantToLearnChoice.Other:
+                if (!input.searchText)
+                    return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToLearnChoice.All:
                 return "\u041E\u0433\u043E\u0433\u043E\u0448\u0435\u0447\u043A\u0438, \u043F\u0440\u044F\u043C \u043E\u0442\u0430\u043A \u0445\u043E\u0447\u0435\u0448 \u0437\u043D\u0430\u0442\u0438 \u0432\u0441\u0435?";
@@ -166,6 +172,8 @@ var WantToMakeGiftTextResolver = (function (_super) {
         ];
         switch ((Number(input.typeChoice))) {
             case WantToMakeGiftChoice.Other:
+                if (!input.searchText)
+                    return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
             case WantToMakeGiftChoice.LoveAndWarmth:
                 return "\u041B\u044E\u0431\u043E\u0432 \u0406 \u0442\u0435\u043F\u043B\u043E, \u043C\u0456\u043C\u0456\u043C\u0456";
