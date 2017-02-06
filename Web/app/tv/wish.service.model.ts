@@ -39,10 +39,12 @@ export class WantToHaveTextResolver extends WishTextResolverBase {
             побався ним з годинку(або ще краще з'їш;). Зроби глибокий вдох і спитай себе на видиху,
             тільки чесно - вона зробила тебе щасливішою?`,
             `Ваш подарунок прибув, сер. Давай, щоб нє мєлочіцца, я дам тобі всі-всі-всі речі, які ти бажаєш!
-             Що тоді буде?`
+             Що тоді буде?`,
+            `А ось і твій дорогенький ${input.searchText}. Побавлюсь-но я ним сьогодні, і завтра, і післязавтра.
+            А після-після-завтра вона вже набридла:( Ну-до-та! Мені потрібна нова більш яскрава іграшка!`
         ];
 
-        switch (<WantToHaveChoice>(Number(input.typeChoice))) {
+        switch (<WantToHaveChoice>(+(input.typeChoice))) {
             case WantToHaveChoice.Other:
                 if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
@@ -51,7 +53,7 @@ export class WantToHaveTextResolver extends WishTextResolverBase {
             case WantToHaveChoice.Couple:
                 return `Ууу, цьомки-притулюськи`;
             case WantToHaveChoice.Child:
-                return `Комусь пора стати татком - мамуською)`;
+                return `Комусь пора стати татусьом - мамусьом)`;
             case WantToHaveChoice.Nothing:
                 return `Пустота вона і в Африці пустота - тримай і використовуй responsibly`;
             default:
@@ -70,7 +72,7 @@ export class WantToBeTextResolver extends WishTextResolverBase {
             `Тепер ти ${input.searchText}. Що далі? Депутат, президент, Бог?`
         ];
 
-        switch (<WantToBeChoice>(Number(input.typeChoice))) {
+        switch (<WantToBeChoice>(+(input.typeChoice))) {
             case WantToBeChoice.Other:
                 if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
@@ -95,10 +97,12 @@ export class WantToLearnTextResolver extends WishTextResolverBase {
         let templates = [
             `Здобувати знання - це похвально. Тепер до твоїх здібностей додалась ще одна. 
             Якщо будеш дуже довго клацати, то ти оволодієш усіма скілами цього світу.
-            Ти ж майже Бог! Чи все-таки ні?`
+            Ти ж майже Бог! Чи все-таки ні?`,
+            `До твоїх скілів додався ще один - ${input.searchText}.
+            Цікаво, а ці знання можна з собою в могилу забрати? А там вони мені теж пригодяться?`
         ];
 
-        switch (<WantToLearnChoice>(Number(input.typeChoice))) {
+        switch (<WantToLearnChoice>(+(input.typeChoice))) {
             case WantToLearnChoice.Other:
                 if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
@@ -122,7 +126,7 @@ export class WantToMakeGiftTextResolver extends WishTextResolverBase {
             `Ти ж моя молодчинка! Я вже передав ${input.searchText} тим, кому це насправді потрібно!`,
         ];
 
-        switch (<WantToMakeGiftChoice>(Number(input.typeChoice))) {
+        switch (<WantToMakeGiftChoice>(+(input.typeChoice))) {
             case WantToMakeGiftChoice.Other:
                 if (!input.searchText) return "Но-но-но, не можна нічого в мене не замовити!";
                 return this.getRandomItem(templates);
