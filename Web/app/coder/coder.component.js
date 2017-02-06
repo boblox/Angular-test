@@ -29,5 +29,6 @@ var CoderComponent = (function () {
     ], CoderComponent);
     return CoderComponent;
 }());
-exports.CoderComponent = CoderComponent;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = CoderComponent;
 //# sourceMappingURL=coder.component.js.map

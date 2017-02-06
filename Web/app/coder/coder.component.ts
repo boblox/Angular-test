@@ -6,7 +6,7 @@ import { CoderService } from '../shared/coder.service';
     //moduleId: module.id,
     templateUrl: 'app/coder/coder.component.html'
 })
-export class CoderComponent {
+export default class CoderComponent {
     encodedText: string;
     decodedText: string;
     decodedPlaceholder: string = "Enter decoded text here";

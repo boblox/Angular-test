@@ -6,5 +6,5 @@
     //moduleId: module.id,
     templateUrl: 'app/tv/tv.component.html'
 })
-export class TVComponent {
+export default class TVComponent {
 }

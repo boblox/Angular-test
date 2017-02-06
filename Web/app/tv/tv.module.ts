@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
+import { routing } from './tv.routes';
 
-import { TVComponent } from './tv.component';
+import TVComponent from './tv.component';
 import { SearchComponent } from './search.component';
 import { UserInfoComponent } from './user-info.component';
 import { DateComponent } from './date.component';
@@ -13,7 +14,7 @@ import { WishService } from './wish.service';
 import { CoderService } from '../shared/coder.service';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpModule, RouterModule],
+    imports: [CommonModule, routing, FormsModule, ReactiveFormsModule, HttpModule, RouterModule],
     declarations: [
         TVComponent,
         SearchComponent,
@@ -23,4 +24,4 @@ import { CoderService } from '../shared/coder.service';
     providers: [WishService, CoderService],
     exports: [TVComponent]
 })
-export class TVModule { }
+export default class TVModule { }

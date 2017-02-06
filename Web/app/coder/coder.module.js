@@ -11,22 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var forms_1 = require('@angular/forms');
+var coder_routes_1 = require('./coder.routes');
 var coder_component_1 = require('./coder.component');
+var coder_service_1 = require('../shared/coder.service');
 var CoderModule = (function () {
     function CoderModule() {
     }
     CoderModule = __decorate([
         core_1.NgModule({
-            imports: [common_1.CommonModule, forms_1.FormsModule, forms_1.ReactiveFormsModule],
+            imports: [common_1.CommonModule, coder_routes_1.routing, forms_1.FormsModule, forms_1.ReactiveFormsModule],
             declarations: [
-                coder_component_1.CoderComponent
+                coder_component_1.default
             ],
-            //providers: [WishService],
-            exports: [coder_component_1.CoderComponent]
+            providers: [coder_service_1.CoderService],
+            exports: [coder_component_1.default]
         }), 
         __metadata('design:paramtypes', [])
     ], CoderModule);
     return CoderModule;
 }());
-exports.CoderModule = CoderModule;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = CoderModule;
 //# sourceMappingURL=coder.module.js.map

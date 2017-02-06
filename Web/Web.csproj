@@ -115,6 +115,9 @@
     <Content Include="app\coder\coder.module.js">
       <DependentUpon>coder.module.ts</DependentUpon>
     </Content>
+    <Content Include="app\coder\coder.routes.js">
+      <DependentUpon>coder.routes.ts</DependentUpon>
+    </Content>
     <Content Include="app\shared\coder.service.js">
       <DependentUpon>coder.service.ts</DependentUpon>
     </Content>
@@ -154,6 +157,9 @@
     <Content Include="app\tv\tv.module.js">
       <DependentUpon>tv.module.ts</DependentUpon>
     </Content>
+    <Content Include="app\tv\tv.routes.js">
+      <DependentUpon>tv.routes.ts</DependentUpon>
+    </Content>
     <Content Include="app\tv\user-info.component.html">
       <DependentUpon>user-info.component.ts</DependentUpon>
     </Content>
@@ -176,6 +182,7 @@
     <Content Include="css\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
+    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="package.old.json">
       <DependentUpon>package.json</DependentUpon>
@@ -242,6 +249,12 @@
     <Content Include="app\shared\loading.service.js.map">
       <DependentUpon>loading.service.ts</DependentUpon>
     </Content>
+    <Content Include="app\coder\coder.routes.js.map">
+      <DependentUpon>coder.routes.ts</DependentUpon>
+    </Content>
+    <Content Include="app\tv\tv.routes.js.map">
+      <DependentUpon>tv.routes.ts</DependentUpon>
+    </Content>
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -270,12 +283,14 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\coder\coder.module.ts" />
     <TypeScriptCompile Include="app\coder\coder.component.ts" />
+    <TypeScriptCompile Include="app\coder\coder.routes.ts" />
     <TypeScriptCompile Include="app\shared\coder.service.ts" />
     <TypeScriptCompile Include="app\shared\loading-spinner.component.ts" />
     <TypeScriptCompile Include="app\shared\loading.service.ts" />
     <TypeScriptCompile Include="app\tv\date.component.ts" />
     <TypeScriptCompile Include="app\tv\tv.component.ts" />
     <TypeScriptCompile Include="app\tv\tv.module.ts" />
+    <TypeScriptCompile Include="app\tv\tv.routes.ts" />
     <TypeScriptCompile Include="app\tv\wish.service.model.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\tv\search.component.ts" />

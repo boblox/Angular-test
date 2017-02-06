@@ -1,11 +1,9 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
-import { TVComponent } from './tv/tv.component';
-import { CoderComponent } from './coder/coder.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'tv', pathMatch: 'full' },
-    { path: 'tv', component: TVComponent },
-    { path: 'coder', component: CoderComponent }
+    { path: 'tv', loadChildren: 'app/tv/tv.module' },
+    { path: 'coder', loadChildren: 'app/coder/coder.module' } //lazy-loading
 ];
 
 export const appRoutingProviders: any[] = [

@@ -23,5 +23,6 @@ var TVComponent = (function () {
     ], TVComponent);
     return TVComponent;
 }());
-exports.TVComponent = TVComponent;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = TVComponent;
 //# sourceMappingURL=tv.component.js.map
