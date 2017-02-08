@@ -25,18 +25,18 @@ export class SearchComponent {
     readonly  wantToHaveChoices: WishChoiceSelect[] = [
         { type: WantToHaveChoice.Other, displayText: "Інше", searchText: "" },
         { type: WantToHaveChoice.All, displayText: "Все", searchText: "Everything" },
-        { type: WantToHaveChoice.Nothing, displayText: "Ніщо", searchText: "Nothing" },
+        { type: WantToHaveChoice.Nothing, displayText: "Нічого", searchText: "Nothing" },
         { type: WantToHaveChoice.Couple, displayText: "Хлопця або дівчину", searchText: "Couple" },
         { type: WantToHaveChoice.Child, displayText: "Хлопчика або дівчинку", searchText: "Child" }
     ];
     readonly wantToLearnChoices: WishChoiceSelect[] = [
         { type: WantToLearnChoice.Other, displayText: "Інше", searchText: "" },
         { type: WantToLearnChoice.All, displayText: "Всьому", searchText: "Everything" },
-        { type: WantToLearnChoice.Nothing, displayText: "Нічому", searchText: "Nothing" }
+        { type: WantToLearnChoice.Nothing, displayText: "Нічого не вміти", searchText: "Nothing" }
     ];
     readonly wantToBeChoices: WishChoiceSelect[] = [
         { type: WantToBeChoice.Other, displayText: "Інше", searchText: "" },
-        { type: WantToBeChoice.Everything, displayText: "Всім", searchText: "Everything" },
+        { type: WantToBeChoice.All, displayText: "Всім", searchText: "Everything" },
         { type: WantToBeChoice.Dead, displayText: "Мертвим", searchText: "Dead" },
         { type: WantToBeChoice.Nothing, displayText: "Нічим", searchText: "Nothing" }
     ];

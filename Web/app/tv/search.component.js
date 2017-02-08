@@ -26,18 +26,18 @@ var SearchComponent = (function () {
         this.wantToHaveChoices = [
             { type: wish_service_2.WantToHaveChoice.Other, displayText: "Інше", searchText: "" },
             { type: wish_service_2.WantToHaveChoice.All, displayText: "Все", searchText: "Everything" },
-            { type: wish_service_2.WantToHaveChoice.Nothing, displayText: "Ніщо", searchText: "Nothing" },
+            { type: wish_service_2.WantToHaveChoice.Nothing, displayText: "Нічого", searchText: "Nothing" },
             { type: wish_service_2.WantToHaveChoice.Couple, displayText: "Хлопця або дівчину", searchText: "Couple" },
             { type: wish_service_2.WantToHaveChoice.Child, displayText: "Хлопчика або дівчинку", searchText: "Child" }
         ];
         this.wantToLearnChoices = [
             { type: wish_service_2.WantToLearnChoice.Other, displayText: "Інше", searchText: "" },
             { type: wish_service_2.WantToLearnChoice.All, displayText: "Всьому", searchText: "Everything" },
-            { type: wish_service_2.WantToLearnChoice.Nothing, displayText: "Нічому", searchText: "Nothing" }
+            { type: wish_service_2.WantToLearnChoice.Nothing, displayText: "Нічого не вміти", searchText: "Nothing" }
         ];
         this.wantToBeChoices = [
             { type: wish_service_2.WantToBeChoice.Other, displayText: "Інше", searchText: "" },
-            { type: wish_service_2.WantToBeChoice.Everything, displayText: "Всім", searchText: "Everything" },
+            { type: wish_service_2.WantToBeChoice.All, displayText: "Всім", searchText: "Everything" },
             { type: wish_service_2.WantToBeChoice.Dead, displayText: "Мертвим", searchText: "Dead" },
             { type: wish_service_2.WantToBeChoice.Nothing, displayText: "Нічим", searchText: "Nothing" }
         ];

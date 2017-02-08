@@ -99,7 +99,7 @@ body:before {
     }
 
     .search-result {
-        margin-top: 2rem;
+        margin-top: 1.8rem;
         @include border-radius(15px);
 
         img {
@@ -230,4 +230,15 @@ coder-component {
             margin: .6rem;
         }
     }
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
