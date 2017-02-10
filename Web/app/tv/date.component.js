@@ -26,7 +26,7 @@ var DateComponent = (function () {
         core_1.Component({
             selector: 'date-component',
             //moduleId: module.id,
-            templateUrl: 'app/tv/date.component.html'
+            templateUrl: './date.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], DateComponent);

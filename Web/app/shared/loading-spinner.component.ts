@@ -4,7 +4,7 @@ import { LoadingService } from '../shared/loading.service';
 @Component({
     selector: 'loading-spinner',
     //moduleId: module.id,
-    templateUrl: 'app/shared/loading-spinner.component.html'
+    templateUrl: './loading-spinner.component.html'
 })
 export class LoadingSpinnerComponent implements OnInit, OnDestroy {
     private loading = false;

@@ -2,8 +2,8 @@
 
 export const routes: Routes = [
     { path: '', redirectTo: 'tv', pathMatch: 'full' },
-    { path: 'tv', loadChildren: 'app/tv/tv.module' },
-    { path: 'coder', loadChildren: 'app/coder/coder.module' } //lazy-loading
+    { path: 'tv', loadChildren: './tv/tv.module' },
+    { path: 'coder', loadChildren: './coder/coder.module' } //lazy-loading
 ];
 
 export const appRoutingProviders: any[] = [

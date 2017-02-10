@@ -33,7 +33,7 @@ var UserInfoComponent = (function () {
         core_1.Component({
             selector: 'user-info-component',
             //moduleId: module.id,
-            templateUrl: 'app/tv/user-info.component.html'
+            templateUrl: './user-info.component.html'
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, coder_service_1.CoderService])
     ], UserInfoComponent);

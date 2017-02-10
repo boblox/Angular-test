@@ -4,7 +4,7 @@
 @Component({
     selector: 'tv-component',
     //moduleId: module.id,
-    templateUrl: 'app/tv/tv.component.html'
+    templateUrl: './tv.component.html'
 })
 export default class TVComponent {
 }

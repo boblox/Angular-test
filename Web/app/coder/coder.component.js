@@ -23,7 +23,7 @@ var CoderComponent = (function () {
         core_1.Component({
             selector: 'coder-component',
             //moduleId: module.id,
-            templateUrl: 'app/coder/coder.component.html'
+            templateUrl: './coder.component.html'
         }), 
         __metadata('design:paramtypes', [coder_service_1.CoderService])
     ], CoderComponent);

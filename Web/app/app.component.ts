@@ -1,7 +1,8 @@
 ﻿import { Component } from '@angular/core';
+import '../css/site.css';
 
 @Component({
     selector: 'app-component',
-    templateUrl: 'app/app.component.html'
+    templateUrl: './app.component.html'
 })
 export class AppComponent { }

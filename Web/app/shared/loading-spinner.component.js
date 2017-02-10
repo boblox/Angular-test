@@ -27,7 +27,7 @@ var LoadingSpinnerComponent = (function () {
         core_1.Component({
             selector: 'loading-spinner',
             //moduleId: module.id,
-            templateUrl: 'app/shared/loading-spinner.component.html'
+            templateUrl: './loading-spinner.component.html'
         }), 
         __metadata('design:paramtypes', [loading_service_1.LoadingService])
     ], LoadingSpinnerComponent);

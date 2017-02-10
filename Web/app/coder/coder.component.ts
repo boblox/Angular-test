@@ -4,7 +4,7 @@ import { CoderService } from '../shared/coder.service';
 @Component({
     selector: 'coder-component',
     //moduleId: module.id,
-    templateUrl: 'app/coder/coder.component.html'
+    templateUrl: './coder.component.html'
 })
 export default class CoderComponent {
     encodedText: string;

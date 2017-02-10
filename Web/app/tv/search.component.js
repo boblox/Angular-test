@@ -96,7 +96,7 @@ var SearchComponent = (function () {
         core_1.Component({
             selector: 'search-component',
             //moduleId: module.id,
-            templateUrl: 'app/tv/search.component.html'
+            templateUrl: './search.component.html'
         }), 
         __metadata('design:paramtypes', [wish_service_1.WishService, loading_service_1.LoadingService])
     ], SearchComponent);

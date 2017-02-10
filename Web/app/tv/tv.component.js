@@ -17,7 +17,7 @@ var TVComponent = (function () {
         core_1.Component({
             selector: 'tv-component',
             //moduleId: module.id,
-            templateUrl: 'app/tv/tv.component.html'
+            templateUrl: './tv.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], TVComponent);

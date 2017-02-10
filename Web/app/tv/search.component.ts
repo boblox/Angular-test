@@ -10,7 +10,7 @@ type WishChoiceSelect = { type: WishTypeChoice, displayText: string, searchText:
 @Component({
     selector: 'search-component',
     //moduleId: module.id,
-    templateUrl: 'app/tv/search.component.html'
+    templateUrl: './search.component.html'
 })
 export class SearchComponent {
     headerText: string;

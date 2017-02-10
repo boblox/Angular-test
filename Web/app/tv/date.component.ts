@@ -3,7 +3,7 @@
 @Component({
     selector: 'date-component',
     //moduleId: module.id,
-    templateUrl: 'app/tv/date.component.html'
+    templateUrl: './date.component.html'
 })
 export class DateComponent {
     @Input() format: string;

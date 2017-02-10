@@ -6,7 +6,7 @@ import { CoderService } from '../shared/coder.service';
 @Component({
     selector: 'user-info-component',
     //moduleId: module.id,
-    templateUrl: 'app/tv/user-info.component.html'
+    templateUrl: './user-info.component.html'
 })
 export class UserInfoComponent implements OnInit, OnDestroy {
     userName: string;
